@@ -1,0 +1,17 @@
+*{margin:0;padding:0;font-size: 14px;}
+.container{position:relative;margin:100px 50px;border:1px solid;display:flex;flex-wrap:wrap;justify-content: flex-start;align-items: flex-start;}
+.container > div{cursor:default;padding:.3em 1.3em;margin:1.5em;text-align: center;}
+
+.container > div:hover:not(.chosen){cursor:default;background:#f1f5fa;border-radius:3px;}
+.chosen{background:#7bc9dc;border-radius:3px;}
+
+
+/*类windows操作所需样式*/
+#selectDiv{cursor:default;position:fixed;width:0px;height:0px;font-size:0px;margin:0px;padding:0px;border:1px solid #0099FF;background-color:#C3D5ED;z-index:1000;filter:alpha(opacity:60);opacity:0.6;display:none;}
+.mouseMenu{max-width:141px;box-shadow:1px 1px 4px rgba(0,0,0,.2);border:1px solid #bbb;border-radius:2px;min-height:27px;padding:2px 0;position:absolute;background-color:#FFF}
+.mouseMenu li{list-style:none;margin:0;font-size:13px!important;color:#5b667b!important;display:list-item;cursor:default;height:27px;line-height:27px;white-space:nowrap;position:relative;padding:0 30px;}
+.mouseMenu li i.fa{position:absolute;top:7px;left:15px;}
+.mouseMenu:first-of-type li{padding:0 60px 0 40px;}
+.mouseMenu .separate{padding:0;margin:5px 0;height:1px;line-height:0;font-size:0!important;background-color:#d0cccc;cursor:default;}
+.mouseMenu .li-chosen,.mouseMenu li:not(.separate):hover{border-radius:3px;box-shadow:0 0 0 1px #7da2ce,inset 0 0 1px #fff;background:-webkit-gradient(linear, center top, center bottom, from(#dcebfd), to(#c2dcfd));background-color:#cfe3fd;}
+.arrowicon{background:url('../images/arrow.png') right center no-repeat}

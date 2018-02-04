@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>类windows操作</title>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/window.css" >
+</head>
+<body>
+
+<div class="container">
+	<div><img src="images/folder.png"><p>研发文件</p></div>
+	<div><img src="images/folder.png"><p>今日总结</p></div>
+	<div><img src="images/folder.png"><p>项目进展</p></div>
+	<div><img src="images/folder.png"><p>设计部</p></div>
+	<div><img src="images/folder.png"><p>工程部</p></div>
+	<div><img src="images/bmp.png"><p>区位图</p></div>
+	<div><img src="images/doc.png"><p>交通图</p></div>
+	<div><img src="images/pptx.png"><p>年终总结</p></div>
+	<div><img src="images/folder.png"><p>开发部</p></div>
+	<div><img src="images/folder.png"><p>申请材料</p></div>
+	<div><img src="images/bmp.png"><p>截图</p></div>
+	<div><img src="images/doc.png"><p>申请书</p></div>
+	<div><img src="images/pptx.png"><p>明日宣讲</p></div>
+	<div><img src="images/folder.png"><p>财务</p></div>
+</div>
+
+<script type="text/javascript" src="js/jQuery.js"></script>
+<script type="text/javascript" src="js/window.js"></script>
+<script type="text/javascript">
+	$(".container").windows({
+		children : "div",
+		chosenClass : "chosen",
+		itemMenu : function($this,$chosens){
+			var menu = '',
+				names = (function(){
+					var arrs = [];
+					$chosens.find("p").each(function(){
+						arrs.push(this.textContent);
+					});
+					return arrs.join();
+				})();
+			menu += '<li onclick="alert(\'打开：'+names+'\')">打开</li>';
+			menu += '<li id="22" class="arrowicon">发送到</li>';
+			menu += '<li id="23" class="arrowicon">更新文件</li>';
+			return menu;
+		},
+		iconHtml : function(content){     //生成图标
+			switch(content){
+				case '打开' : return '<i class="fa fa-hand-paper-o"/>';
+				case '发送到' : return '<i class="fa fa-send-o"/>';
+				case '更新文件' : return '<i class="fa fa-refresh"/>';
+				//......
+				default : return "";
+			}
+		},
+		blankMenu : function($this){
+			var menu = '';
+			menu += '<li onclick="history.go(-1)">后退</li>';
+			menu += '<li onclick="history.go(0)">刷新</li>';
+			menu += '<li onclick="history.go(1)">前进</li>';
+			return menu;
+		},
+		smallMenu : function(id,$this,$chosens){
+			var menu = '',
+				names = (function(){
+					var arrs = [];
+					$chosens.find("p").each(function(){
+						arrs.push(this.textContent);
+					});
+					return arrs;
+				})();
+			if(id=="22"){
+				menu += '<li id="24" class="arrowicon">个人交换</li>';
+			}else if(id=="23"){
+				names.forEach(function(name){
+					menu += '<li onclick="alert(\'更新文件：'+name+'\')">'+name+'</li>';
+				});
+			}else if(id=="24"){
+				menu += '<li id="24" onclick="alert(\'发送给：小明\')">小明</li>';
+				menu += '<li id="24" onclick="alert(\'发送给：小红\')">小红</li>';
+				menu += '<li id="24" onclick="alert(\'发送给：小亮\')">小亮</li>';
+			}
+			return menu;
+		}
+	});
+
+</script>
+
+</body>
+</html>
