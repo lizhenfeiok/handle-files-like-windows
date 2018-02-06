@@ -4,7 +4,7 @@ body{background: #A69373}
 .container > div{cursor:default;padding:.3em 1.2em;margin:1.5em;text-align: center;}
 .container > div > p {width:56px;}
 
-.container > div:hover:not(.chosen){cursor:default;background:#f1f5fa;border-radius:3px;}
+.container > div:hover:not(.chosen){cursor:default;background:rgba(112, 168, 181,.5);border-radius:3px;}
 .chosen{background:#7bc9dc;border-radius:3px;}
 
 
