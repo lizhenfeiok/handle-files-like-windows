@@ -1,6 +1,8 @@
 *{margin:0;padding:0;font-size: 14px;}
-.container{position:relative;margin:100px 50px;border:1px solid;display:flex;flex-wrap:wrap;justify-content: flex-start;align-items: flex-start;}
-.container > div{cursor:default;padding:.3em 1.3em;margin:1.5em;text-align: center;}
+body{background: #A69373}
+.container{background:whitesmoke;border-radius:5px;box-shadow:3px 3px 5px #444;position:relative;margin:100px 50px;display:flex;flex-wrap:wrap;justify-content: flex-start;align-items: flex-start;}
+.container > div{cursor:default;padding:.3em 1.2em;margin:1.5em;text-align: center;}
+.container > div > p {width:56px;}
 
 .container > div:hover:not(.chosen){cursor:default;background:#f1f5fa;border-radius:3px;}
 .chosen{background:#7bc9dc;border-radius:3px;}

@@ -23,6 +23,32 @@
 	<div><img src="images/doc.png"><p>申请书</p></div>
 	<div><img src="images/pptx.png"><p>明日宣讲</p></div>
 	<div><img src="images/folder.png"><p>财务</p></div>
+	<div><img src="images/folder.png"><p>会议总结</p></div>
+	<div><img src="images/folder.png"><p>今日行程</p></div>
+	<div><img src="images/folder.png"><p>项目规划</p></div>
+	<div><img src="images/folder.png"><p>设计原理</p></div>
+	<div><img src="images/folder.png"><p>706项目</p></div>
+	<div><img src="images/bmp.png"><p>政策方向</p></div>
+	<div><img src="images/doc.png"><p>楼盘大小</p></div>
+	<div><img src="images/pptx.png"><p>下周计划</p></div>
+	<div><img src="images/folder.png"><p>交通工具</p></div>
+	<div><img src="images/folder.png"><p>仓库</p></div>
+	<div><img src="images/bmp.png"><p>四川项目</p></div>
+	<div><img src="images/doc.png"><p>待删除</p></div>
+	<div><img src="images/pptx.png"><p>js总结</p></div>
+	<div><img src="images/folder.png"><p>XMind</p></div>
+	<div><img src="images/folder.png"><p>今日规划</p></div>
+	<div><img src="images/folder.png"><p>项目实施</p></div>
+	<div><img src="images/folder.png"><p>设计草稿</p></div>
+	<div><img src="images/folder.png"><p>多媒体教室</p></div>
+	<div><img src="images/bmp.png"><p>最终定稿</p></div>
+	<div><img src="images/doc.png"><p>楼盘区位</p></div>
+	<div><img src="images/pptx.png"><p>政策解读</p></div>
+	<div><img src="images/folder.png"><p>数据挖掘</p></div>
+	<div><img src="images/folder.png"><p>人工智能</p></div>
+	<div><img src="images/bmp.png"><p>精通Java</p></div>
+	<div><img src="images/doc.png"><p>JS历史</p></div>
+	<div><img src="images/pptx.png"><p>区块链</p></div>
 </div>
 
 <script type="text/javascript" src="js/jQuery.js"></script>
@@ -42,14 +68,14 @@
 				})();
 			menu += '<li onclick="alert(\'打开：'+names+'\')">打开</li>';
 			menu += '<li id="22" class="arrowicon">发送到</li>';
-			menu += '<li id="23" class="arrowicon">更新文件</li>';
+			menu += '<li id="23" class="arrowicon">选中的文件</li>';
 			return menu;
 		},
 		iconHtml : function(content){     //生成图标
 			switch(content){
 				case '打开' : return '<i class="fa fa-hand-paper-o"/>';
 				case '发送到' : return '<i class="fa fa-send-o"/>';
-				case '更新文件' : return '<i class="fa fa-refresh"/>';
+				case '选中的文件' : return '<i class="fa fa-file-o"/>';
 				//......
 				default : return "";
 			}
