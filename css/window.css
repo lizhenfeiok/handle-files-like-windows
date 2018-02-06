@@ -1,5 +1,5 @@
 *{margin:0;padding:0;font-size: 14px;}
-body{background: #A69373}
+body{background: #A69373;-moz-user-select:none;-webkit-user-select:none;user-select:none;/*禁止选中文本*/}
 .container{background:whitesmoke;border-radius:5px;box-shadow:3px 3px 5px #444;position:relative;margin:100px 50px;display:flex;flex-wrap:wrap;justify-content: flex-start;align-items: flex-start;}
 .container > div{cursor:default;padding:.3em 20px;margin:1.5em;text-align: center;}
 .container > div > p {width:56px;}
